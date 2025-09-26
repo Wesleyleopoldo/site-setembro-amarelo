@@ -1,0 +1,466 @@
+/*
+  Esquema de Cores Baseado nos Arquivos:
+  --color-background: #f8f1e5 (Amarelo Claro/Creme - Fundo Principal)
+  --color-text-primary: #4a3e2e (Marrom Escuro - Texto Principal)
+  --color-highlight-yellow: #fbe695 (Amarelo de Destaque - Usado para <mark>)
+  --color-card-dark: #6b8e23 (Verde Oliva/Escuro - Fundo dos Cards)
+  --color-card-reception: #e6a759 (Laranja/Amarelo Escuro - Fundo do Card Acolhimento)
+  --color-border: #d4c7b2 (Borda sutil)
+*/
+
+:root {
+    --color-background: #f8f1e5;
+    --color-text-primary: #4a3e2e;
+    --color-text-light: #ffffff;
+    --color-highlight-yellow: #fbe695;
+    --color-card-dark: #6b8e23;
+    --color-card-reception: #e6a759;
+    --color-border: #d4c7b2;
+    --font-serif: 'Georgia', serif;
+    --font-sans: 'Arial', sans-serif;
+}
+
+/* Estilos Globais e Reset Básico */
+body {
+    font-family: var(--font-serif);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-sans);
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    padding-top: 30px;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: var(--color-card-dark); /* Cor do título para imitar a numeração destacada */
+}
+
+/* Marcação Amarela - Conecta o Conteúdo ao Tema */
+mark {
+    background-color: var(--color-highlight-yellow);
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: var(--color-text-primary); /* Garante que o texto marcado tenha cor escura */
+}
+
+/* Marcações de Ênfase e Nuances */
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+u {
+    text-decoration: underline;
+}
+
+/* Header (2. Título principal) */
+.main-header {
+    background-color: var(--color-card-dark);
+    color: var(--color-text-light);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main-header h1 {
+    color: var(--color-text-light);
+    margin-bottom: 5px;
+}
+
+.main-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+}
+
+.main-header mark {
+    background-color: rgba(255, 255, 255, 0.2); /* Destaque sutil no header escuro */
+    color: var(--color-text-light);
+}
+
+/* 3. Subtítulo e Cards de Propósito */
+.purpose-section h2, .purpose-section .section-icon {
+    color: var(--color-card-dark);
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-purpose {
+    flex: 1 1 30%;
+    padding: 20px;
+    border-radius: 8px;
+    color: var(--color-text-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-purpose h3 {
+    color: var(--color-text-light);
+    margin-top: 0;
+    font-size: 1.4em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.conscious, .prevention {
+    background-color: var(--color-card-dark);
+}
+
+.reception {
+    background-color: var(--color-card-reception);
+}
+
+/* 4.a. Features (Diálogo, Educação, Rede) */
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    flex: 1 1 30%;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-highlight-yellow); /* Fundo amarelo dos icon box */
+    min-width: 200px;
+}
+
+.feature-box .icon {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 4.b. Frases que Inspiram (Quotes) */
+.quote-container {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quote-box {
+    flex: 1 1 30%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f7e6c0; /* Amarelo mais suave para os quotes */
+    position: relative;
+    min-width: 250px;
+    border-left: 5px solid var(--color-card-dark);
+}
+
+.quote-box p.quote-text {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* 4.c. Laço Amarelo (Ribbon Section) */
+.yellow-ribbon-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+    background-color: #fff9e9; /* Fundo muito claro para o bloco */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.ribbon-image {
+    flex: 0 0 35%;
+    text-align: center;
+}
+
+.ribbon-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ribbon-text {
+    flex: 1;
+}
+
+.ribbon-text h2 {
+    padding-top: 0;
+    border-bottom: none;
+    margin-top: 0;
+}
+
+.ribbon-text mark {
+    /* Remove o padding extra da mark quando dentro do h2 */
+    background-color: var(--color-highlight-yellow); 
+}
+
+/* 6.c. Importância da Saúde Mental nas Diferentes Áreas da Vida */
+.life-areas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.area-card {
+    background-color: var(--color-card-dark);
+    color: var(--color-text-light);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.area-card h3 {
+    color: var(--color-text-light);
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.area-card .icon {
+    font-size: 5em;
+    float: left;
+    margin-left: 14px;
+}
+
+.area-card mark {
+    background-color: var(--color-card-reception);
+    color: var(--color-text-light);
+}
+
+.crucial-info {
+    background-color: #e0f2f1;
+    border-left: 5px solid var(--color-card-reception);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.crucial-info .icon {
+    font-size: 1.3em;
+    margin-left: 20px;
+}
+
+/* 6. Listas e Aprendizados */
+.subsection-title {
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.lists-container {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.list-box {
+    flex: 1 1 45%;
+    padding: 20px;
+    border: 1px dashed var(--color-border);
+    border-radius: 8px;
+    background-color: #fff9e9;
+    min-width: 300px;
+}
+
+.list-box h3 {
+    padding-top: 0;
+    border-bottom: 1px solid var(--color-text-primary);
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.list-box ol, .list-box ul {
+    padding-left: 20px;
+}
+
+.list-box li {
+    margin-bottom: 8px;
+}
+
+/* 7. Favicon e Identidade Visual */
+.visual-identity-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff9e9;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.identity-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.identity-ribbon img {
+    width: 100px;
+    height: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.visual-identity-section h2 {
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+
+
+/* 8. Formulário de Apoio */
+.form-section {
+    padding: 20px;
+    background-color: #f7e6c0;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.support-form {
+    background-color: var(--color-text-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input:not([type="radio"]) {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group.checkbox-group p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group.danger-question {
+    background-color: #ffe0e0;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ff0000;
+}
+
+.range-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.range-input output {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.submit-button {
+    background-color: var(--color-card-reception);
+    color: var(--color-text-light);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #d89648;
+}
+
+.immediate-resources {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--color-card-dark);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .cards-container, .features-container, .quote-container, .lists-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-purpose, .feature-box, .quote-box, .list-box {
+        min-width: 100%;
+    }
+    
+    .yellow-ribbon-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ribbon-image {
+        flex: none;
+        width: 60%;
+    }
+
+    .identity-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
