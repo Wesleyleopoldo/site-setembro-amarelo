@@ -235,6 +235,73 @@ u {
     background-color: var(--color-highlight-yellow); 
 }
 
+#title-videos-section {
+    padding: 0;
+    
+}
+
+.video-title h3 {
+    margin: 18.72px 0 10px 0;
+    color: var(--color-text-light);
+}
+
+.videos-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+    background-color: #fff9e9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    flex-direction: column;
+}
+
+.video-section {
+    background-color: var(--color-card-dark);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 3.5rem 0;
+    border-radius: 40px;
+}
+
+.video-section iframe {
+    border-radius: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1)
+}
+
+.title-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+    background-color: #fff9e9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    flex-direction: column;
+}
+
+.title-image {
+    margin: 18.72px 0 10px 0;
+    color: var(--color-card-dark);
+}
+
+.image img {
+    border: solid grey;
+    border-width: 1px;
+
+    border-radius: 15px;
+}
+
 /* 6.c. Importância da Saúde Mental nas Diferentes Áreas da Vida */
 .life-areas-container {
     display: grid;
