@@ -172,7 +172,6 @@ mark {
 }
 
 .ribbon-text mark {
-    /* Remove o padding extra da mark quando dentro do h2 */
     background-color: var(--color-highlight-yellow); 
 }
 
@@ -243,7 +242,6 @@ mark {
     border-radius: 15px;
 }
 
-/* 6.c. Importância da Saúde Mental nas Diferentes Áreas da Vida */
 .life-areas-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
